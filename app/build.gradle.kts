@@ -53,7 +53,6 @@ dependencies {
     androidTestImplementation("androidx.room:room-testing:2.6.1")
 
     // To use Kotlin annotation processing tool (kapt)
-    // ksp("androidx.room:room-compiler:2.6.1")
     ksp("androidx.room:room-compiler:2.6.1")
 
     // LifeCycle

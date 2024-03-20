@@ -9,6 +9,7 @@ class User(
     var age: Int
 ) {
 
+    // TODO - Check for automatic Generation
     @PrimaryKey(autoGenerate = true)
     var id: Long? = null
 

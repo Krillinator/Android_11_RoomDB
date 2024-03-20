@@ -29,14 +29,17 @@ class MainActivity : AppCompatActivity() {
         println(applicationContext.getDatabasePath("my-app-db"))
 
         binding.btnSubmitUser.setOnClickListener {
-
             userRepository.performDatabaseOperation(Dispatchers.IO) {
                 val user = User("Benny", 15)
-
                 userRepository.insertOrUpdateUser(user)
-
             }
+        }
 
+        // Delete User
+        binding.btnDeleteUser.setOnClickListener {
+            userRepository.performDatabaseOperation(Dispatchers.IO) {
+                userRepository.deleteUserById(1)
+            }
         }
 
         binding.tvDbOperation.setOnClickListener {

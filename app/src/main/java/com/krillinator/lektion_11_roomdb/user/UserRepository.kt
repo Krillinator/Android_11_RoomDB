@@ -21,6 +21,14 @@ class UserRepository(
         myDatabase.userDao().insertOrUpdateUser(user)
     }
 
+    // DELETE USER BY ID
+    fun deleteUserById(user: User) {
+
+        // TODO - FIND USER
+
+        myDatabase.userDao().deleteUserById(user)
+    }
+
      fun findAllUsers(): Flow<List<User>> {
         return myDatabase.userDao().findAllUsers()
     }
